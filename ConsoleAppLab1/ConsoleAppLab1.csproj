@@ -4,10 +4,27 @@
 		<TargetFramework>net6.0</TargetFramework>
 		<OutputType>Exe</OutputType>
 
-		<ImplicitUsings>enable</ImplicitUsings>
 		<LangVersion>preview</LangVersion>
 		<Nullable>enable</Nullable>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<Folder Include="Assets\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="HtmlAgilityPack" Version="1.11.37" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\BasedFunctionalFeatures\BasedFunctionalFeatures.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Assets\dane.xml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 
 </Project>
